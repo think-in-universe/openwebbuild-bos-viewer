@@ -38,9 +38,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const authStore = useAuthStore();
   const componentSrc = router.query;
 
-  useEffect(() => {
-    initializeSegment();
-  }, []);
+  // useEffect(() => {
+  //   initializeSegment();
+  // }, []);
 
   useEffect(() => {
     // Displays the Zendesk widget only if user is signed in and on the home page

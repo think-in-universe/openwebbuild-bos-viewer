@@ -1,5 +1,5 @@
 import Analytics from 'analytics-node';
-import { createHash } from 'crypto';
+// import { createHash } from 'crypto';
 import { get, split, truncate } from 'lodash';
 import { nanoid } from 'nanoid';
 import type { UIEvent } from 'react';
@@ -8,14 +8,14 @@ import { networkId } from './config';
 
 let segment: Analytics | null = null;
 let anonymousUserId = '';
-let hashId = '';
+// let hashId = '';
 let anonymousUserIdCreatedAt = '';
 
 export function setAccountIdHash(accountId: string) {
-  const hash = createHash('sha512');
-  hash.update(accountId);
-  hashId = hash.digest('hex');
-  localStorage.setItem('hashId', hashId);
+  // const hash = createHash('sha512');
+  // hash.update(accountId);
+  // hashId = hash.digest('hex');
+  localStorage.setItem('hashId', accountId);
 }
 
 function getAnonymousId() {
@@ -49,9 +49,9 @@ export function init() {
     typeof window === 'undefined'
       ? {}
       : {
-          host: `${window.location.protocol}//${window.location.host}`,
-          path: '/api/segment',
-        };
+        host: `${window.location.protocol}//${window.location.host}`,
+        path: '/api/segment',
+      };
 
   try {
     segment = new Analytics(segmentKey, options);
