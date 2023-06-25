@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+export const runtime = 'experimental-edge';
 
 // routes which may include additional path segments
 // e.g. /about/contact-us, /papers/nightshade
