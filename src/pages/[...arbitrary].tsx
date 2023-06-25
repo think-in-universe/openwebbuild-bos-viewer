@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 // routes which may include additional path segments
 // e.g. /about/contact-us, /papers/nightshade
 const extendableRoutes: Record<string, string> = {

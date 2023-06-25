@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -18,20 +19,20 @@ type MetaPreview = {
 type MainPostData = Record<
   string,
   | {
-      post: {
-        main: string;
-      };
-    }
+    post: {
+      main: string;
+    };
+  }
   | undefined
 >;
 
 type CommentPostData = Record<
   string,
   | {
-      post: {
-        comment: string;
-      };
-    }
+    post: {
+      comment: string;
+    };
+  }
   | undefined
 >;
 
