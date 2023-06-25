@@ -48,7 +48,7 @@ specifiers:
   local-storage: ^2.0.0
   lodash: ^4.17.21
   near-api-js: 2.1.3
-  near-social-vm: github:NearSocial/VM#2.2.3
+  near-social-vm: openwebbuild/bos-vm#github-markdown
   next: 13.3.4
   prettier: ^2.7.1
   react: 18.2.0
@@ -102,7 +102,7 @@ dependencies:
   local-storage: 2.0.0
   lodash: 4.17.21
   near-api-js: 2.1.3
-  near-social-vm: github.com/NearSocial/VM/381ddbdc8ef5bde7975bebe8f640c1a5f9d85b94_awokea2vfxacwgsj2e4vclmrdy
+  near-social-vm: github.com/openwebbuild/bos-vm/35e0c14875d5044a8956809e6ea8c3527fd0508e_awokea2vfxacwgsj2e4vclmrdy
   next: 13.3.4_biqbaboplfbrettd7655fr4n2y
   prettier: 2.8.8
   react: 18.2.0
@@ -6123,6 +6123,10 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: false
 
+  /gemoji/7.1.0:
+    resolution: {integrity: sha512-wI0YWDIfQraQMDs0yXAVQiVBZeMm/rIYssf8LZlMDdssKF19YqJKOHkv4zvwtVQTBJ0LNmErv1S+DqlVUudz8g==}
+    dev: false
+
   /get-caller-file/2.0.5:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
@@ -8631,6 +8635,15 @@ packages:
       functions-have-names: 1.2.3
     dev: false
 
+  /remark-gemoji/7.0.1:
+    resolution: {integrity: sha512-vhjuntkvYxRgM4Um6L5N7B3SrNu3eX6jNqpqAywpAvSYPbmDPNL3I5E6zWm+KPCyh3OpKRc5OPnz7SifggzePw==}
+    dependencies:
+      '@types/mdast': 3.0.11
+      gemoji: 7.1.0
+      unified: 10.1.2
+      unist-util-visit: 4.1.2
+    dev: false
+
   /remark-gfm/3.0.1:
     resolution: {integrity: sha512-lEFDoi2PICJyNrACFOfDD3JlLkuSbOa5Wd8EPt06HUdptv8Gn0bxYTdbU/XXQ3swAPkEaGxxPN9cbnMHvVu1Ig==}
     dependencies:
@@ -9857,9 +9870,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/NearSocial/VM/381ddbdc8ef5bde7975bebe8f640c1a5f9d85b94_awokea2vfxacwgsj2e4vclmrdy:
-    resolution: {tarball: https://codeload.github.com/NearSocial/VM/tar.gz/381ddbdc8ef5bde7975bebe8f640c1a5f9d85b94}
-    id: github.com/NearSocial/VM/381ddbdc8ef5bde7975bebe8f640c1a5f9d85b94
+  github.com/openwebbuild/bos-vm/35e0c14875d5044a8956809e6ea8c3527fd0508e_awokea2vfxacwgsj2e4vclmrdy:
+    resolution: {tarball: https://codeload.github.com/openwebbuild/bos-vm/tar.gz/35e0c14875d5044a8956809e6ea8c3527fd0508e}
+    id: github.com/openwebbuild/bos-vm/35e0c14875d5044a8956809e6ea8c3527fd0508e
     name: near-social-vm
     version: 2.2.3
     peerDependencies:
@@ -9924,6 +9937,7 @@ packages:
       react-singleton-hook: 3.4.0_biqbaboplfbrettd7655fr4n2y
       react-syntax-highlighter: 15.5.0_react@18.2.0
       react-uuid: 1.0.3
+      remark-gemoji: 7.0.1
       remark-gfm: 3.0.1
       styled-components: 5.3.10_biqbaboplfbrettd7655fr4n2y
       tweetnacl: 1.0.3
