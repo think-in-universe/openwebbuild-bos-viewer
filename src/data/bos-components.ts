@@ -36,6 +36,8 @@ type NetworkComponents = {
   widgetMetadata: string;
   widgetMetadataEditor: string;
   wrapper: string;
+  writePostButton: string;
+  writePostPage: string;
 };
 
 export const componentsByNetworkId: Record<NetworkId, NetworkComponents | undefined> = {
@@ -76,6 +78,8 @@ export const componentsByNetworkId: Record<NetworkId, NetworkComponents | undefi
     widgetMetadata: 'eugenethedream/widget/WidgetMetadata',
     widgetMetadataEditor: 'eugenethedream/widget/WidgetMetadataEditor',
     wrapper: 'one.testnet/widget/DIG.Theme',
+    writePostButton: 'openwebbuild.testnet/widget/Post.WriteButton',
+    writePostPage: 'openwebbuild.testnet/widget/Post.Editor',
   },
 
   mainnet: {
@@ -114,5 +118,7 @@ export const componentsByNetworkId: Record<NetworkId, NetworkComponents | undefi
     widgetMetadata: 'mob.near/widget/WidgetMetadata',
     widgetMetadataEditor: 'near/widget/WidgetMetadataEditor',
     wrapper: 'near/widget/DIG.Theme',
+    writePostButton: 'openwebbuild.near/widget/Post.WriteButton',
+    writePostPage: 'openwebbuild.near/widget/Post.Editor',
   },
 };
