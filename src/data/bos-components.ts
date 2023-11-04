@@ -2,6 +2,7 @@ import type { NetworkId } from '@/utils/types';
 
 type NetworkComponents = {
   blogPage: string;
+  blogsPage: string;
   bosDirectory: string;
   componentSummary: string;
   componentsPage: string;
@@ -44,7 +45,8 @@ type NetworkComponents = {
 export const componentsByNetworkId: Record<NetworkId, NetworkComponents | undefined> = {
   // localnet: undefined,
   testnet: {
-    blogPage: 'openwebbuild.testnet/widget/Page.Posts',
+    blogPage: 'openwebbuild.testnet/widget/Page.Post',
+    blogsPage: 'openwebbuild.testnet/widget/Page.Posts',
     bosDirectory: 'one.testnet/widget/BOSDirectory',
     componentSummary: 'one.testnet/widget/ComponentSummary',
     componentsPage: 'one.testnet/widget/ComponentsPage',
@@ -85,7 +87,8 @@ export const componentsByNetworkId: Record<NetworkId, NetworkComponents | undefi
   },
 
   mainnet: {
-    blogPage: 'openwebbuild.near/widget/Page.Posts',
+    blogPage: 'openwebbuild.near/widget/Page.Post',
+    blogsPage: 'openwebbuild.near/widget/Page.Posts',
     bosDirectory: 'onboarder.near/widget/BOSDirectory',
     componentSummary: 'near/widget/ComponentSummary',
     componentsPage: 'near/widget/ComponentsPage',

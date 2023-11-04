@@ -17,7 +17,7 @@ const GatewaysPage: NextPageWithLayout = () => {
   return (
     <Wrapper>
       <ComponentWrapperPage
-        src={components.blogPage}
+        src={components.blogsPage}
         meta={{ title: 'Blog', description: 'Blogs by community' }}
       />
     </Wrapper>
