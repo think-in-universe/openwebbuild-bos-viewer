@@ -4,16 +4,13 @@ import { VmComponent } from '@/components/vm/VmComponent';
 import { useCurrentComponentStore } from '@/stores/current-component';
 import { recordClick } from '@/utils/analytics';
 
+import type { Meta } from '../MetaTags';
 import { MetaTags } from '../MetaTags';
 
 type Props = {
   componentProps?: Record<string, unknown>;
   src: string;
-  meta?: {
-    title: string;
-    description: string;
-    image?: string;
-  };
+  meta?: Meta;
 };
 
 export function ComponentWrapperPage(props: Props) {

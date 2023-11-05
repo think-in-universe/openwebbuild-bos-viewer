@@ -3,6 +3,7 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
+import type { Meta } from '@/components/MetaTags';
 import { ComponentWrapperPage } from '@/components/near-org/ComponentWrapperPage';
 import { useBosComponents } from '@/hooks/useBosComponents';
 import { useDefaultLayout } from '@/hooks/useLayout';
@@ -16,9 +17,13 @@ const Wrapper = styled.div`
   }
 `;
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req, query }) => {
   const { accountId, permalink } = query;
-  const meta = await queryPost(accountId as string, permalink as string);
+  const meta: Meta | null = await queryPost(accountId as string, permalink as string);
+  if (meta) {
+    const host = req.headers.host;
+    meta.url = `https://${host}${req.url}`;
+  }
 
   return {
     props: {
@@ -41,7 +46,7 @@ const BlogPage: NextPageWithLayout = ({ meta }: InferGetServerSidePropsType<type
           accountId,
           permalink
         }}
-        meta={{ title: meta?.title, description: meta?.description, image: meta?.imageUrl }}
+        meta={{ title: meta?.title, description: meta?.description, image: meta?.imageUrl, url: meta?.url, type: "article" }}
       />
     </Wrapper>
   );
