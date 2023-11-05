@@ -11,19 +11,19 @@ const Wrapper = styled.div`
   }
 `;
 
-const GatewaysPage: NextPageWithLayout = () => {
+const BlogsPage: NextPageWithLayout = () => {
   const components = useBosComponents();
 
   return (
     <Wrapper>
       <ComponentWrapperPage
-        src={components.blogPage}
+        src={components.blogsPage}
         meta={{ title: 'Blog', description: 'Blogs by community' }}
       />
     </Wrapper>
   );
 };
 
-GatewaysPage.getLayout = useDefaultLayout;
+BlogsPage.getLayout = useDefaultLayout;
 
-export default GatewaysPage;
+export default BlogsPage;
