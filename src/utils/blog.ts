@@ -1,4 +1,5 @@
 const GRAPHQL_ENDPOINT = "https://near-queryapi.api.pagoda.co";
+const IPFS_ENDPOINT = "https://ipfs.near.social/ipfs";
 
 async function fetchGraphQL(operationsDoc: string, operationName: string, variables: Record<string, string | number>) {
   return await fetch(`${GRAPHQL_ENDPOINT}/v1/graphql`, {
@@ -47,12 +48,17 @@ export async function queryPost(accountId: string, permalink: string) {
       const posts = body.data.openwebbuild_near_blog_posts;
       if (posts && posts.length > 0) {
         const p = posts[0];
-        const content = JSON.parse(p.content ?? null) as Record<string, string>;
+        const content = JSON.parse(p.content ?? null) as Record<string, string | any>;
         if (content) {
+          let imageUrl = null;
+          const image = content.image;
+          if (image) {
+            imageUrl = image.url ?? (image.ipfs_cid ? `${IPFS_ENDPOINT}/${image.ipfs_cid}` : null);
+          }
           return {
             title: content.title ?? null,
             description: content.text?.slice(0, 80) ?? null,
-            imageUrl: content.image ?? null,
+            imageUrl,
           }
         }
       }
