@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const GatewaysPage: NextPageWithLayout = () => {
+const BlogsPage: NextPageWithLayout = () => {
   const components = useBosComponents();
 
   return (
@@ -24,6 +24,6 @@ const GatewaysPage: NextPageWithLayout = () => {
   );
 };
 
-GatewaysPage.getLayout = useDefaultLayout;
+BlogsPage.getLayout = useDefaultLayout;
 
-export default GatewaysPage;
+export default BlogsPage;

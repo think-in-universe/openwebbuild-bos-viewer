@@ -27,7 +27,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   };
 };
 
-const GatewaysPage: NextPageWithLayout = ({ meta }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const BlogPage: NextPageWithLayout = ({ meta }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const router = useRouter();
   const components = useBosComponents();
 
@@ -47,6 +47,6 @@ const GatewaysPage: NextPageWithLayout = ({ meta }: InferGetServerSidePropsType<
   );
 };
 
-GatewaysPage.getLayout = useDefaultLayout;
+BlogPage.getLayout = useDefaultLayout;
 
-export default GatewaysPage;
+export default BlogPage;
