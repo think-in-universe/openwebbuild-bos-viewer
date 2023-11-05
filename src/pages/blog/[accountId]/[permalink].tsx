@@ -18,13 +18,7 @@ const Wrapper = styled.div`
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { accountId, permalink } = query;
-  // const meta = await queryPost(accountId as string, permalink as string);
-
-  const meta = {
-    title: "Blog Post",
-    description: "Post Details",
-    imageUrl: "https://avatars.githubusercontent.com/u/103877809?s=200&v=4",
-  };
+  const meta = await queryPost(accountId as string, permalink as string);
 
   return {
     props: {
